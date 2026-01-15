@@ -1,0 +1,37 @@
+#Cinema 
+
+print(">>> Seja bem-vindo ao cinema <<<")
+print("")
+print("Selecione o filme que deseja ver")
+
+filme = input("1- Homem Aranha\n2- Batman\n3- Superman\n")
+
+
+while True:
+    if filme not in ["1", "2", "3","Homem Aranha" , "Batman" , "Superman"]:  
+        print("Filme Inválido!!")
+        filme = input("1- Homem Aranha\n2- Batman\n3- Superman\n") 
+    else:
+        print("Filme Selecionado! Agora selecione o número de ingressos que deseja comprar: \n")
+        break
+
+
+ingresso = int(input("Digite a quantidade de ingressos:"))
+
+while True:
+    if ingresso > 9:  
+        print("Quantidade de ingressos inválida, somente até 9 disponíveis.")
+        ingresso = int(input("Digite a quantidade de ingressos:"))
+    else:
+        print(f"Você selecionou {ingresso} ingresso(s).")
+        break
+print ("Selecione um dos horarios disponiveis\n 12:00\n 15:00\n 21:00")
+horario = input("Digite o horário desejado:")
+
+while True :
+    if horario not in ["12:00", "15:00" ,"21:00"] :
+        print ("Horario Invalido selecione dentre as opçoes ")
+        horario = input("Digite o horário desejado:")
+    else :
+        print (f"Compra concluida com sucesso voce selecionou o filme {filme} no horario de {horario} aproveite o seu(s){ingresso} ingressos volte sempre!!")
+        break
