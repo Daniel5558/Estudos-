@@ -1,0 +1,22 @@
+#Exercicio Basico de criação de calculadora
+
+#calculadora
+
+num1 = float(input("Digite o primeiro número: "))
+num2 = float(input("Digite o segundo número: "))
+operacao = input("Digite a operação (+, -, *, /): ")
+
+if operacao == "+":
+    print ("O resultado é:" , num1 + num2)
+
+elif operacao == "-":
+    print ("O resultado é:" , num1 - num2)
+
+elif operacao == "*":
+    print ("O resultado é:" , num1 * num2)
+
+elif operacao == "/":
+    print ("O resultado é:" , num1 / num2)
+
+else:
+    print ("Operação inválida")
