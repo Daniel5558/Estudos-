@@ -1,22 +1,36 @@
-#Exercicio Basico de criação de calculadora
+def calculadora():
+    while True:
+        n1 = int(input('Digite um número: '))
+        operacao = input('Escolha uma operação (+, -, *, /): ')
+        n2 = int(input('Digite outro número: '))
+        
+        
+        
+        if operacao not in ['+', '-', '*', '/']:
+            print("Operação inválida! Tente novamente.")
+            continue
+        
+        
+        if operacao == '+':
+            resultado = n1 + n2
+        elif operacao == '-':
+            resultado = n1 - n2
+        elif operacao == '*':
+            resultado = n1 * n2
+        elif operacao == '/':
+            
+            if n2 == 0:
+                print("Erro: Divisão por zero não permitida.")
+                continue
+            resultado = n1 / n2
+            
+        
+        print(f'O resultado é: {resultado}')
 
-#calculadora
+        
+        continuar = int(input("Deseja realizar outra operação?\n1 - Sim\n2 - Não\n"))
+        if continuar == 2:
+            print("Obrigado por usar a calculadora!")
+            break  
 
-num1 = float(input("Digite o primeiro número: "))
-num2 = float(input("Digite o segundo número: "))
-operacao = input("Digite a operação (+, -, *, /): ")
-
-if operacao == "+":
-    print ("O resultado é:" , num1 + num2)
-
-elif operacao == "-":
-    print ("O resultado é:" , num1 - num2)
-
-elif operacao == "*":
-    print ("O resultado é:" , num1 * num2)
-
-elif operacao == "/":
-    print ("O resultado é:" , num1 / num2)
-
-else:
-    print ("Operação inválida")
+calculadora()
