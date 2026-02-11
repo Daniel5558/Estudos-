@@ -1,22 +1,21 @@
-#Cinema 
 
-print(">>> Seja bem-vindo ao cinema <<<")
-print("")
+print(">>> Seja bem-vindo ao cinema <<<\n")
 print("Selecione o filme que deseja ver")
 
-filme = input("1- Homem Aranha\n2- Batman\n3- Superman\n")
-
+filme = input("1- Homem Aranha\n2- Batman\n3- Superman\n\n")
+print('')
 
 while True:
     if filme not in ["1", "2", "3","Homem Aranha" , "Batman" , "Superman"]:  
-        print("Filme Inválido!!")
-        filme = input("1- Homem Aranha\n2- Batman\n3- Superman\n") 
+        print("Filme Inválido , Tente Novamente !!")
+        filme = input("1- Homem Aranha\n2- Batman\n3- Superman\n\n") 
+        print('')
     else:
-        print("Filme Selecionado! Agora selecione o número de ingressos que deseja comprar: \n")
+        print("Filme Selecionado!\nAgora selecione o número de ingressos que deseja comprar: \n")
         break
 
 
-ingresso = int(input("Digite a quantidade de ingressos:"))
+ingresso = int(input("Digite a quantidade de ingressos , Somente 9 Disponiveis : "))
 
 while True:
     if ingresso > 9:  
