@@ -1,0 +1,116 @@
+escolha = int(input("Escolha aonde você vai ir hoje:\n1- Cinema\n2- Parque de Diversões\n3- Museu\n\n"))
+
+# ---------------- CINEMA ----------------
+def cinema():
+    print(">>> Seja bem-vindo ao cinema <<<\n")
+    print("Selecione o filme que deseja ver")
+
+    filme = input("1- Homem Aranha\n2- Batman\n3- Superman\n\n")
+
+    while True:
+        if filme not in ["1", "2", "3", "Homem Aranha", "Batman", "Superman"]:
+            print("Filme Inválido, Tente Novamente !!")
+            filme = input("1- Homem Aranha\n2- Batman\n3- Superman\n\n")
+        else:
+            print("\nFilme Selecionado!")
+            break
+
+    ingresso = int(input("Digite a quantidade de ingressos (Máx 9): "))
+
+    while True:
+        if ingresso > 9 or ingresso <= 0:
+            print("Quantidade inválida, máximo 9 ingressos.")
+            ingresso = int(input("Digite novamente: "))
+        else:
+            break
+
+    print("Horários disponíveis: 12:00 | 15:00 | 21:00")
+    horario = input("Digite o horário desejado: ")
+
+    while horario not in ["12:00", "15:00", "21:00"]:
+        print("Horário inválido!")
+        horario = input("Digite novamente: ")
+
+    print(f"\nCompra concluída! Filme {filme} às {horario}.")
+    print(f"{ingresso} ingresso(s) reservado(s). Bom filme!\n")
+
+
+# ---------------- PARQUE DE DIVERSÕES ----------------
+def parque_div():
+    print(">>> Bem-vindo ao Parque de Diversões <<<\n")
+    print("Escolha o brinquedo principal:")
+
+    brinquedo = input("1- Montanha Russa\n2- Roda Gigante\n3- Casa do Terror\n\n")
+
+    while True:
+        if brinquedo not in ["1", "2", "3", "Montanha Russa", "Roda Gigante", "Casa do Terror"]:
+            print("Brinquedo inválido, tente novamente!")
+            brinquedo = input("1- Montanha Russa\n2- Roda Gigante\n3- Casa do Terror\n\n")
+        else:
+            print("\nBrinquedo selecionado!")
+            break
+
+    ingresso = int(input("Digite a quantidade de ingressos (Máx 15): "))
+
+    while True:
+        if ingresso > 15 or ingresso <= 0:
+            print("Quantidade inválida, máximo 15 ingressos.")
+            ingresso = int(input("Digite novamente: "))
+        else:
+            break
+
+    print("Turnos disponíveis: Manhã | Tarde | Noite")
+    turno = input("Digite o turno desejado: ")
+
+    while turno not in ["Manhã", "Tarde", "Noite"]:
+        print("Turno inválido!")
+        turno = input("Digite novamente: ")
+
+    print(f"\nReserva concluída para o {brinquedo} no turno da {turno}.")
+    print(f"{ingresso} ingresso(s) reservado(s). Divirta-se!\n")
+
+
+# ---------------- MUSEU ----------------
+def museu():
+    print(">>> Bem-vindo ao Museu <<<\n")
+    print("Escolha a exposição que deseja visitar:")
+
+    exposicao = input("1- Dinossauros\n2- Espaço Sideral\n3- História do Brasil\n\n")
+
+    while True:
+        if exposicao not in ["1", "2", "3", "Dinossauros", "Espaço Sideral", "História do Brasil"]:
+            print("Exposição inválida, tente novamente!")
+            exposicao = input("1- Dinossauros\n2- Espaço Sideral\n3- História do Brasil\n\n")
+        else:
+            print("\nExposição selecionada!")
+            break
+
+    ingresso = int(input("Digite a quantidade de ingressos (Máx 20): "))
+
+    while True:
+        if ingresso > 20 or ingresso <= 0:
+            print("Quantidade inválida, máximo 20 ingressos.")
+            ingresso = int(input("Digite novamente: "))
+        else:
+            break
+
+    print("Horários disponíveis: 10:00 | 14:00 | 17:00")
+    horario = input("Digite o horário desejado: ")
+
+    while horario not in ["10:00", "14:00", "17:00"]:
+        print("Horário inválido!")
+        horario = input("Digite novamente: ")
+
+    print(f"\nVisita agendada para {exposicao} às {horario}.")
+    print(f"{ingresso} ingresso(s) reservado(s). Aproveite a visita!\n")
+
+
+# ---------------- MENU PRINCIPAL ----------------
+if escolha == 1:
+    cinema()
+elif escolha == 2:
+    parque_div()
+elif escolha == 3:
+    museu()
+else:
+    print("Escolha inválida")
